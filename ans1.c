@@ -9,7 +9,6 @@
 #include "timers.h"
 #include "queue.h"
 
-//TaskHandle_t xHandle = NULL;
 xTaskHandle TaskHandle_1;
 xTaskHandle TaskHandle_2;
 xTaskHandle TaskHandle_3;
@@ -21,26 +20,29 @@ unsigned long ulVar = 10UL;
 
 void task1(void)
 {
-
+	while(1){
 		printf("this is task 1\n");
 		vTaskDelay(1000);
-		vTaskDelete(TaskHandle_1);
+		//vTaskDelete(TaskHandle_1);
+	}
 }
 
 void task2(void)
 {
-
+	while(1){
 		printf("this is task 2\n");
 		vTaskDelay(2000);
-		vTaskDelete(TaskHandle_2);
+		//vTaskDelete(TaskHandle_2);
+	}
 }
 
 void task3(void)
 {
-
+	while(1){
 		printf("this is task 3\n");
 		vTaskDelay(5000);
-		vTaskDelete(TaskHandle_3);
+		//vTaskDelete(TaskHandle_3);
+	}
 }
 
 void send_msg(void)
